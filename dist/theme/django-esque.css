@@ -2,8 +2,7 @@
  * Solarized Dark theme for reveal.js.
  * Author: Achim Staebler
  */
-@import url(./fonts/league-gothic/league-gothic.css);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
 /**
  * Solarized colors by Ethan Schoonover
  */
@@ -20,19 +19,19 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * GLOBAL STYLES
  *********************************************/
 :root {
-  --r-background-color: #002b36;
-  --r-main-font: Lato, sans-serif;
+  --r-background-color: #0c4b33;
+  --r-main-font: Roboto, sans-serif;
   --r-main-font-size: 40px;
-  --r-main-color: #93a1a1;
+  --r-main-color: #c1cad2;
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
-  --r-heading-font: League Gothic, Impact, sans-serif;
-  --r-heading-color: #eee8d5;
+  --r-heading-font: Roboto, Impact, sans-serif;
+  --r-heading-color: #f1fff7;
   --r-heading-line-height: 1.2;
   --r-heading-letter-spacing: normal;
   --r-heading-text-transform: uppercase;
   --r-heading-text-shadow: none;
-  --r-heading-font-weight: normal;
+  --r-heading-font-weight: 400;
   --r-heading1-text-shadow: none;
   --r-heading1-size: 3.77em;
   --r-heading2-size: 2.11em;
