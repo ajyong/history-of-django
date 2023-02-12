@@ -22,32 +22,36 @@ section.has-light-background, section.has-light-background h1, section.has-light
   --r-background-color: #0c4b33;
   --r-main-font: Roboto, sans-serif;
   --r-main-font-size: 40px;
-  --r-main-color: #c1cad2;
+  --r-main-color: #f1fff7;
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
   --r-heading-font: Roboto, Impact, sans-serif;
   --r-heading-color: #f1fff7;
   --r-heading-line-height: 1.2;
   --r-heading-letter-spacing: normal;
-  --r-heading-text-transform: uppercase;
+  --r-heading-text-transform: normal;
   --r-heading-text-shadow: none;
-  --r-heading-font-weight: 400;
+  --r-heading-font-weight: 600;
   --r-heading1-text-shadow: none;
   --r-heading1-size: 3.77em;
   --r-heading2-size: 2.11em;
   --r-heading3-size: 1.55em;
   --r-heading4-size: 1em;
   --r-code-font: monospace;
-  --r-link-color: #268bd2;
+  --r-link-color: #ee6666;
   --r-link-color-dark: #1a6091;
-  --r-link-color-hover: #78b9e6;
+  --r-link-color-hover: #971414;
   --r-selection-background-color: #d33682;
   --r-selection-color: #fff;
 }
 
 .reveal-viewport {
-  background: #002b36;
+  background: #0c4b33;
   background-color: var(--r-background-color);
+}
+
+.reveal-viewport .slides .feature {
+  background-color: var(--r-featurePage-background-color);
 }
 
 .reveal {
