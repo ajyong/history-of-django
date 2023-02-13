@@ -20,29 +20,189 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          <section data-background-color="#0c4b33" data-markdown>
+          <section data-markdown>
             <textarea data-template>
               ## The History of Django
-              ### [Aaron Yong](https://aarony.dev)
+              #### (A love letter)
+              ### Compiled by [Aaron Yong](https://aarony.dev)
               #### EdmontonPy Feb 2023
             </textarea>
           </section>
-          <section data-markdown>
+          <section data-background-color="#187f58" data-markdown>
             <textarea data-template>
-              ### Table of Contents
-
-              1. asdf
-              1. efjlajsldf
-              1. j3ajlwjlj
+              ### Topics
+              1. What is Django?
+              1. Major Milestones
+              1. Opinions & Criticisms
+              1. Django Community
+              1. The Future
             </textarea>
           </section>
         </section>
-        <section data-markdown>
-          <textarea data-template>
-			      ## The History of Django
-            ### [Aaron Yong](https://aarony.dev)
-            #### EdmontonPy Feb 2023
-          </textarea>
+        <section>
+          <section data-markdown>
+            <textarea data-template>
+              ## What is Django?
+              #### [The web framework for perfectionists with deadlines.](https://www.djangoproject.com/start/overview/)
+              - "Kitchen sink", "batteries included" full-stack
+              - Sane defaults, security-minded
+              - Versatile, w/community support
+              - Comprehensive, easy [first steps](https://docs.djangoproject.com/en/4.1/#first-steps)
+
+              Named after jazz guitarist Django Reinhardt!
+            </textarea>
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            <textarea data-template>
+              ## Major Milestones
+              ### From pre-0.95 to 4.1
+              Sources:
+              - [Django Release Notes](https://docs.djangoproject.com/en/4.1/releases/)
+              - [Wikipedia](https://en.wikipedia.org/wiki/Django_(web_framework)#Version_history)
+              - [Quora](https://www.quora.com/What-is-the-history-of-the-Django-web-framework-Why-has-it-been-described-as-developed-in-a-newsroom/answer/Simon-Willison)
+            </textarea>
+          </section>
+          <section data-background-color="#187f58" data-markdown>
+            <textarea data-template>
+              ### [Pre-0.95](https://www.quora.com/What-is-the-history-of-the-Django-web-framework-Why-has-it-been-described-as-developed-in-a-newsroom/answer/Simon-Willison)
+              #### 2003-2005
+              ##### From PHP to Python
+              - Developed in a newsroom
+              - Wanted standards & scalability
+                - CSS
+                - URL patterning
+                - HTTP Request/Response: proto-WSGI
+                - CMS admin (now just "Django admin")
+              - Company would open-source Django
+              ---
+              ### [0.95,](https://docs.djangoproject.com/en/4.1/releases/0.95/) [0.96](https://docs.djangoproject.com/en/4.1/releases/0.96/)
+              #### March 23, 2007
+              ##### Removing the magic
+              - Less automatic code (e.g. auto-plurals)
+              - Clearer/shorter imports
+              - More stable API
+              ---
+              ### [1.0](https://docs.djangoproject.com/en/4.1/releases/1.0/)
+              #### September 3, 2008
+              ##### Stability, forwards-compatibility
+              - De-coupled `admin` and `models`
+              - Stronger Unicode support 🤩
+              - XSS mitigation: autoescape outputs in templates
+              ---
+              ### Django REST Framework [0.1](https://github.com/encode/django-rest-framework/tree/0.1)
+              #### Feb 21, 2011
+              ##### A small* library appears
+              - Would pioneer API-driven Django development
+              - Like Django, has [quick](https://www.django-rest-framework.org/tutorial/quickstart/), simple [tutorials](https://www.django-rest-framework.org/tutorial/1-serialization/)
+
+              <small>\* Would actually make an arguably big splash on web dev scene</small>
+              ---
+              ### [1.4 LTS](https://docs.djangoproject.com/en/4.1/releases/1.4/)
+              #### March 23, 2012
+              ##### Django's 1st LTS! (EOL Oct 1, 2015)
+              - (1.3) [Class-based views](https://docs.djangoproject.com/en/4.1/topics/class-based-views/): a time-saver*
+              - Time zones support
+              - CSRF: `ensure_csrf_cookie()` decorator
+              - PBKDF2 password storage algorithm
+              - New project layout and `manage.py`
+
+              <small>\* Won't magically mean better code though</small>
+              ---
+              ### [1.8 LTS](https://docs.djangoproject.com/en/4.1/releases/1.8/)
+              #### April 1, 2015
+              ##### 2nd LTS, not an April Fool's joke
+              - (1.7) Built-in [DB schema migrations](https://docs.djangoproject.com/en/4.1/topics/migrations/)
+              - [Jinja2](https://jinja.palletsprojects.com) & other template engines support
+              - Major `django-secure` features added to Django
+                - `check --deploy`
+              - ORM additions
+                - (1.7) [QuerySet methods from model manager](https://docs.djangoproject.com/en/4.1/releases/1.7/#calling-custom-queryset-methods-from-the-manager)
+                - (1.7) [Prefetch](https://docs.djangoproject.com/en/4.1/ref/models/querysets/#prefetch-objects) objects
+                - [Query](https://docs.djangoproject.com/en/4.1/ref/models/expressions/) and [conditional](https://docs.djangoproject.com/en/4.1/ref/models/conditional-expressions/) expressions
+                - [Database functions](https://docs.djangoproject.com/en/4.1/ref/models/database-functions/)
+              ---
+              ### [1.11 LTS](https://docs.djangoproject.com/en/4.1/releases/1.11/)
+              #### April 4, 2017
+              ##### Pre-2.0
+              - Class-based model indexes (cleaner code)
+              - From Python- to HTML-based form widget authoring
+              - ORM additions
+                - [Subquery](https://docs.djangoproject.com/en/4.1/ref/models/expressions/#django.db.models.Subquery)
+                - [Exists](https://docs.djangoproject.com/en/4.1/ref/models/expressions/#django.db.models.Exists)
+
+              Less change allowed Djangonauts to prep for 2.0
+              ---
+              ### [2.0](https://docs.djangoproject.com/en/4.1/releases/2.0/)
+              #### December 2, 2017
+              ##### Bye Python 2
+              - Semver-esque versioning convention
+              - Simplified URL routing syntax (thank goodness)
+                ```python
+                # Before
+                url(r'^articles/(?P<year>[0-9]{4})/$', views.year_archive),
+                # After
+                path('articles/<int:year>/', views.year_archive),
+                ```
+              - Mobile-friendly Django admin
+              ---
+              ### [2.2 LTS](https://docs.djangoproject.com/en/4.1/releases/2.2/)
+              #### April 1, 2019
+              ##### They can't keep getting away with April Fool's*
+              - Fine-grained constraints via `Meta.constraints`
+                - [CheckConstraint](https://docs.djangoproject.com/en/4.1/ref/models/constraints/#django.db.models.CheckConstraint)
+                - [UniqueConstraint](https://docs.djangoproject.com/en/4.1/ref/models/constraints/#django.db.models.UniqueConstraint)
+
+              <small>\* Their LTS release cadence is every 2 years</small>
+              ---
+              ### [3.0](https://docs.djangoproject.com/en/4.1/releases/3.0/)
+              #### December 2, 2019
+              ##### How do you do, fellow ~~kids~~ ASGI? 🛹
+              - Official MariaDB (MySQL fork) support
+              - Start to support* [ASGI](https://asgi.readthedocs.io/), WSGI's async-capable spiritual successor
+
+              <small>\* Django middleware, views, ORM, etc. are still synchronous on 3.0</small>
+              ---
+              ### [3.1,](https://docs.djangoproject.com/en/4.1/releases/3.1/) [3.2 LTS](https://docs.djangoproject.com/en/4.1/releases/3.2/)
+              #### April 6, 2021
+              ##### Async Views & Middleware
+              - Practical `async` usage
+                - Functional [views](https://docs.djangoproject.com/en/4.1/topics/http/views/#async-views) can be async-capable
+                - So can properly-defined [middleware](https://docs.djangoproject.com/en/4.1/topics/http/middleware/#async-middleware)
+                - [Testing](https://docs.djangoproject.com/en/4.1/topics/testing/tools/#async-tests) is async-aware too!
+              - `django.db.models` upgrades
+                - [Functional indexes](https://docs.djangoproject.com/en/4.1/releases/3.2/#functional-indexes)
+                - More DB backend support for [JSONField](https://docs.djangoproject.com/en/4.1/releases/3.1/#jsonfield-for-all-supported-database-backends)
+              ---
+              ### [4.0 LTS](https://docs.djangoproject.com/en/4.1/releases/4.0/)
+              #### December 7, 2021
+              ##### Use Python's time zone support
+              - Replaced `pytz` with Python's [zoneinfo](https://docs.python.org/3/library/zoneinfo.html#module-zoneinfo)
+              - Forms, Formsets, ErrorList are now rendered using template engine
+              - Stronger `scrypt` password hasher added
+              - Built-in [Redis cache](https://docs.djangoproject.com/en/4.1/topics/cache/#redis) support
+              ---
+              ### [4.1](https://docs.djangoproject.com/en/4.1/releases/4.1/)
+              #### August 3, 2022
+              ##### Where we are today
+              - [Async class-based views](https://docs.djangoproject.com/en/4.1/topics/class-based-views/#async-class-based-views)
+              - [ORM is also becoming async-capable](https://docs.djangoproject.com/en/4.1/topics/db/queries/#async-queries)
+            </textarea>
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            <textarea data-template>
+              ## Opinions & Criticisms
+              ### My personal hot takes 🔥
+            </textarea>
+          </section>
+          <section data-background-color="#187f58" data-markdown>
+            <textarea data-template>
+              ## Is Django Still Worth Learning?
+              ### Yes.
+            </textarea>
         </section>
       </div>
     </div>
