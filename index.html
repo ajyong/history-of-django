@@ -23,8 +23,7 @@
           <section data-markdown>
             <textarea data-template>
               ## The History of Django
-              #### (A love letter)
-              ### Compiled by [Aaron Yong](https://aarony.dev)
+              ### compiled by [Aaron Yong](https://aarony.dev)
               #### EdmontonPy Feb 2023
             </textarea>
           </section>
@@ -34,8 +33,8 @@
               1. What is Django?
               1. Major Milestones
               1. Opinions & Criticisms
-              1. Django Community
-              1. The Future
+              1. Community
+              1. Future
             </textarea>
           </section>
         </section>
@@ -49,7 +48,7 @@
               - Versatile, w/community support
               - Comprehensive, easy [first steps](https://docs.djangoproject.com/en/4.1/#first-steps)
 
-              Named after jazz guitarist Django Reinhardt!
+              <small>Named after jazz guitarist Django Reinhardt</small>
             </textarea>
           </section>
         </section>
@@ -70,11 +69,11 @@
               #### 2003-2005
               ##### From PHP to Python
               - Developed in a newsroom
-              - Wanted standards & scalability
-                - CSS
+              - Wanted DRY standards & scalability
+                - New-age tech called **CSS**
                 - URL patterning
-                - HTTP Request/Response: proto-WSGI
                 - CMS admin (now just "Django admin")
+                - HTTP Request/Response: proto-WSGI
               - Company would open-source Django
               ---
               ### [0.95,](https://docs.djangoproject.com/en/4.1/releases/0.95/) [0.96](https://docs.djangoproject.com/en/4.1/releases/0.96/)
@@ -97,7 +96,7 @@
               - Would pioneer API-driven Django development
               - Like Django, has [quick](https://www.django-rest-framework.org/tutorial/quickstart/), simple [tutorials](https://www.django-rest-framework.org/tutorial/1-serialization/)
 
-              <small>\* Would actually make an arguably big splash on web dev scene</small>
+              <small>\* Would actually make a fairly big splash on web dev scene</small>
               ---
               ### [1.4 LTS](https://docs.djangoproject.com/en/4.1/releases/1.4/)
               #### March 23, 2012
@@ -200,9 +199,140 @@
           </section>
           <section data-background-color="#187f58" data-markdown>
             <textarea data-template>
-              ## Is Django Still Worth Learning?
-              ### Yes.
+              ### Is Django still worth learning?
+              ## Yes.
+              ---
+              ### Support from Django Software Foundation & open-source community
+              ---
+              ### While it may not win in performance benchmarks, a dev can get up to speed fast.
+              Development time usually exceeds performance considerations
+
+              <small>Python itself <a href="https://github.com/faster-cpython/benchmarking-public/blob/main/RESULTS.md">has been getting faster</a></small>
+              ---
+              ### Django does a good job helping new devs write safer, cleaner code
+              Reusable patterns, sane defaults, proper warnings where possible
+              ---
+              ### Packages I Enjoyed
+              - [Django Debug Toolbar](https://pypi.org/project/django-debug-toolbar/)
+                - Visual SQL query inspector 😍
+                - Close 2nd: template rendering time profiler
+              - [Wagtail CMS](https://wagtail.org/)
+                - NASA, Google, NHS 👀
+              - [Django REST Framework](https://www.django-rest-framework.org/)
+                - API development stalwart in a SPA-filled world
+              ---
+              ## Criticisms
+              ---
+              ### Django relies on its own ORM
+              The knowledge base built around its ORM is tougher to port over
+
+              <small>I find myself wondering why other ORMs "aren't like Django's", for better and for worse.</small>
+              <small>Mitigated by understanding my use case and abstracting my problem.</small>
+              ---
+              ### Django's own template engine gets far more attention
+              Most template tutorials, guides, and packages rely on Django's engine instead of other venerable ones like Jinja2.
+
+              <small>Again, I find myself wondering why other template engines "aren't like Django's"</small>
+              ---
+              ### It has always had strongest support for PostgreSQL
+              It reached a boiling point when Django 1.8 added [PostgreSQL-specific model fields](https://docs.djangoproject.com/en/4.1/ref/contrib/postgres/).
+
+              <small>Why aren't other competing DBs as feature-filled as PostgreSQL?</small>
+              ---
+              ### Lack of NoSQL support
+              Though, you might get away with relation DBs and `JSONField`...
+
+              ...and I have a bone to pick about "schemaless" thought (or lack thereof)
+
+              <small>Those who "hate migrations" end up paying the debt in their app logic</small>
+              <small>and/or JSON/YAML eventually</small>
+              ---
+              ### Its `async/await` support
+              A lot of tutorials & guides are written for synchronous Django
+
+              With Django 4.x, `async` has improved (ORM, views, middleware)
+
+              [Django Channels](https://channels.readthedocs.io/en/stable/) is supported by the DSF & supercharges Django's ASGI capabilities.
+
+              <small>Remember: ASGI is not some free magical performance enhancer</small>
+
+              <small>A bad (async) ORM query will (still) be super slow! 💣</small>
             </textarea>
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            <textarea data-template>
+              ## Community
+            </textarea>
+          </section>
+          <section data-background-color="#187f58" data-markdown>
+            <textarea data-template>
+              ### Who uses Django?
+              Pinterest, Instagram, Udemy, and many more!
+
+              Source: [Stackshare](https://stackshare.io/django)
+              ---
+              ### DjangoCon(s)
+              Big enough to have not one, but _two_ annual conventions!
+
+              #### [US](https://2023.djangocon.us/) and the [EU](https://2023.djangocon.eu/)
+              ---
+              ### [Django Girls](https://djangogirls.org)
+              Non-profit organization and community
+
+              Empowering & helping women organize free, 1-day workshops
+              ---
+              ### [Dev Edmonton Society](https://devedmonton.com/)
+              #### Find us in #meetup-edmontonpy and #django 🐍
+            </textarea>
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            <textarea data-template>
+              ## Future
+            </textarea>
+          </section>
+          <section data-background-color="#187f58" data-markdown>
+            <textarea data-template>
+              ### It's looking Forwards-Compatible
+              There will always be new web technologies.
+
+              Django won't be the first to adopt them.
+
+              It will do so while ensuring your websites keep ticking.
+
+              <small>We are forced to learn so much, so quickly that Django's stability is appreciated.</small>
+              ---
+              ### Expanding My Horizons
+              After Djangonauting for 3+ years, I explored [FastAPI](https://www.django-rest-framework.org/).
+
+              <small>Sacrilege?! _Nonsense_.</small>
+
+              #### Different tools for different jobs.
+
+              <small>FastAPI's [SQLAlchemy tutorial](https://fastapi.tiangolo.com/tutorial/sql-databases/) feels like a step backwards from Django's ORM 😵</small>
+
+              I'm grateful learned Django before FastAPI, not the other way around.
+            </textarea>
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            <textarea data-template>
+              ## Conclusion
+              #### Django is and will continue to be a venerable web framework
+
+              <small>As a pretty average developer, when I write non-Django web apps,</small>
+              <small>I'm able to reason how it could be done _with_ Django. 🙂</small>
+
+              [Get started](https://www.djangoproject.com/start/) & join fellow Djangonauts 🚀
+              ---
+              ## Thank you 🥳
+              #### Questions?
+            </textarea>
+          </section>
         </section>
       </div>
     </div>
